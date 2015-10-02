@@ -1,0 +1,29 @@
+.header {
+	color: #8E8E8E;
+}
+.header .navbar{
+	margin-bottom: 0;
+	margin-top: 30px;
+}
+.header .navbar .nav li a:hover, .header .navbar .nav li a:focus, .header .navbar .nav li a:active{
+	background-color: transparent;
+	color: #fff;
+}
+.header a {
+	color: #8E8E8E;
+}
+.header .social {
+	padding-left: 50px;
+}
+.header .social a {
+	display: block;	
+	width: 30px;
+	line-height:30px;
+	background-color: #8e8e8e;
+	color: #000;
+	border-radius: 50%;
+	float: left;
+	margin-right: 12px;
+	text-align: center;
+	font-size: 16px;
+}

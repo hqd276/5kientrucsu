@@ -1,0 +1,47 @@
+.middle .tab-content #home {
+	position: relative;
+}
+.middle .tab-content #home .about {
+	overflow: hidden;
+	position: relative;
+	height: 500px;
+}
+.middle .tab-content #home .about .carousel{ 
+	opacity: .5;
+}
+.middle .tab-content #home .about img {
+	height: 100%;
+	max-width: 100%;
+}
+.middle .tab-content #home .about .about-content{
+	position: absolute;
+	z-index: 2;
+	top: 90px;
+	left: 100px;
+	font-size: 42px;
+}
+.middle .tab-content #home .about .about-content ul li:first-child {
+	color: #808080;
+}
+.middle .tab-content #home .about .about-content ul li:last-child {
+	font-size: 18px;
+}
+.middle .tab-content #home .about .about-content span{
+	color: #99cc00;
+}
+
+.middle .tab-content .tab-pane .product{
+	margin-bottom: 15px;
+	height: 250px;
+}
+.middle .tab-content .tab-pane .product img {
+	width: 100%;
+}
+.middle .tab-content .tab-pane .product p{
+	background-color: rgba(255,255,255,0.5);
+	width: calc(100% - 30px);
+	position: absolute;
+	bottom: 0;
+	line-height: 50px;
+	color: #000;
+}
