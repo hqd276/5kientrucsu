@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Project extends MX_Controller {
+class Service extends MX_Controller {
 	private $b_Check = true;
 
 	public function __construct(){
@@ -12,10 +12,10 @@ class Project extends MX_Controller {
 		$this->load->library(array('form_validation'));
 
 		#Tải model 
-		$this->load->model('admin/modelproject');
+		$this->load->model('admin/modelservice');
 
 		$data = Modules::run('header','home');
-		$data['page'] = 'project';
+		$data['page'] = 'service';
 		$this->template->set_partial('header','header',$data);
 
 		$this->template->set_partial('footer','footer',$data);
@@ -23,39 +23,31 @@ class Project extends MX_Controller {
 	
 	public function index($cat = 0){
 		$data = array();
-		$data['page'] = "project";
+		$data['page'] = "service";
 
 		$where = array('status'=>1);
 		if ($cat)
 			$where['category_id'] = $cat;
- 		$list_items = $this->modelproject->getProject($where);
+ 		$list_items = $this->modelservice->getService($where);
  
  		$data['list_items'] = $list_items;
-		$this->template->build('project',$data);
+		$this->template->build('service',$data);
 	}
 	public function index_t($slug = ''){
 		$data = array();
-		$data['page'] = "project";
+		$data['page'] = "service";
 
 		$where = array('status'=>1);
-		$category = array();
-		$list_items = array();
 
-		if ($slug!=''){
-			$category = $this->modelcategory->getCategoryBy('slug',$slug);
-			if ($category){
-				$where['category_id'] = $category['id'];
-				if ($category['parent']==-1)
-					$category['childs'] = $this->modelcategory->getCategories(array('parent'=>$category['id']));
-				else
-					$category['parent'] = $this->modelcategory->getCategoryBy('id',$category['parent']);
-			}
-
-			$list_items = $this->modelproject->getProject($where);
+		$category = $this->modelcategory->getCategoryBy('slug',$slug);
+		if ($category){
+			$where['category_id'] = $category['id'];
 		}
+
+		$list_items = $this->modelservice->getService($where);
 
  		$data['category'] = $category;
  		$data['list_items'] = $list_items;
-		$this->template->build('project',$data);
+		$this->template->build('service',$data);
 	}
 }

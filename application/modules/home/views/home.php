@@ -5,7 +5,7 @@
 	<!-- Tab panes -->
 		<div class="tab-content">
 	    <div role="tabpanel" class="tab-pane active text-center" id="home">
-	    	<div class="col-sm-8 col-sx-12 about">
+	    	<div class="col-xs-12 col-sm-8 about">
 	    		<div id="carousel" class="carousel slide" data-ride="carousel" data-interval="3000">
 				  <!-- Wrapper for slides -->
 				  <div class="carousel-inner" role="listbox">
@@ -28,32 +28,22 @@
 					</ul>
 				</div>
 	    	</div>
-	    	<div class="col-sm-4 col-sx-6 product ">
-	    		<img src="<?php echo base_url();?>assets/images/1.jpg">
-	    		<p class="text-uppercase">Nội thất</p>
-	    	</div>
-	    	<div class="col-sm-4 col-sx-6 product">
-	    		<img src="<?php echo base_url();?>assets/images/2.jpg">
-	    		<p class="text-uppercase">Kiến trúc</p>
-	    	</div>
-	    	<div class="col-sm-4 col-sx-6 product">
-	    		<img src="<?php echo base_url();?>assets/images/3.jpg">
-	    		<p class="text-uppercase">Shop</p>
-	    	</div>
-	    </div>
-	    <div role="tabpanel" class="tab-pane" id="service">
-	    	<div class="col-sm-4 col-sx-6 product ">
-	    		<img src="<?php echo base_url();?>assets/images/1.jpg">
-	    		<p class="text-uppercase">Nội thất</p>
-	    	</div>
-	    	<div class="col-sm-4 col-sx-6 product">
-	    		<img src="<?php echo base_url();?>assets/images/2.jpg">
-	    		<p class="text-uppercase">Kiến trúc</p>
-	    	</div>
-	    	<div class="col-sm-4 col-sx-6 product">
-	    		<img src="<?php echo base_url();?>assets/images/3.jpg">
-	    		<p class="text-uppercase">Shop</p>
-	    	</div>
+	    	<?php foreach ($cat_service as $key => $value) {?>
+	    		<div class="col-xs-6 col-sm-4 product ">
+			    	<a href="<?php echo base_url('service/'.$value['slug']);?>">
+			    		<img src="<?php echo base_url('uploads/categories/thumbs/'.$value['image']);?>">
+			    		<p class="text-uppercase"><?php echo $value['name']?></p>
+			    	</a>
+		    	</div>
+	    	<?php }?>
+	    	<?php foreach ($cat_project as $key => $value) {?>
+	    		<div class="col-xs-6 col-sm-4 product ">
+			    	<a href="<?php echo base_url('project/'.$value['slug']);?>">
+			    		<img src="<?php echo base_url('uploads/categories/thumbs/'.$value['image']);?>">
+			    		<p class="text-uppercase"><?php echo $value['name']?></p>
+			    	</a>
+		    	</div>
+	    	<?php }?>
 	    </div>
 	</div>
 </div>

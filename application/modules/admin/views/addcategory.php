@@ -1,3 +1,28 @@
+<script type="text/javascript" src="<?php echo base_url();?>assets/js/tinymce/tinymce.min.js"></script>
+<script type="text/javascript">
+tinymce.init({
+    selector: "#description",
+    height:"300",
+    plugins: [
+         "advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
+         "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
+         "save table contextmenu directionality emoticons template paste textcolor"
+   ],
+   file_browser_callback: function(field_name, url, type, win) {
+        if(type=='image') $('#my_form input').click();
+    },
+   toolbar: "insertfile undo redo | styleselect | fontselect | fontsizeselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | print preview media fullpage | forecolor backcolor emoticons", 
+   style_formats: [
+        {title: 'Bold text', inline: 'b'},
+        {title: 'Red text', inline: 'span', styles: {color: '#ff0000'}},
+        {title: 'Red header', block: 'h1', styles: {color: '#ff0000'}},
+        {title: 'Example 1', inline: 'span', classes: 'example1'},
+        {title: 'Example 2', inline: 'span', classes: 'example2'},
+        {title: 'Table styles'},
+        {title: 'Table row 1', selector: 'tr', classes: 'tablerow1'}
+    ]
+});
+</script>
 <div class="contact-form col-sm-12 bg-white">
 	<h2 class="text-uppercase"><?php echo $title?></h2>
 	<div class="pull-right">
@@ -57,7 +82,7 @@
 		<div class="form-group col-sm-12">
 			<label for="inputEmail3" class="col-sm-2 control-label">Description</label>
 			<div class="col-sm-10">
-				<textarea class="form-control" name="description" placeholder="Description"><?php echo $item['description']; ?></textarea>
+				<textarea class="form-control" id="description" name="description" placeholder="Description"><?php echo $item['description']; ?></textarea>
 			</div>
 		</div>
 		<div class="form-group col-sm-12">

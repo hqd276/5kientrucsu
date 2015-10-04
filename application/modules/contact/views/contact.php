@@ -1,7 +1,7 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/contact.css">
 <div class="middle" >
 	<div class="container">
-		<form class="form-horizontal" role="form" method="post" action="">
+		<form class="" role="form" method="post" action="">
 			<span class="success">
 				<?php 
 				if(isset($b_Check))

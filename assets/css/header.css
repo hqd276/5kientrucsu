@@ -27,3 +27,18 @@
 	text-align: center;
 	font-size: 16px;
 }
+
+@media (max-width:768px){
+	.header .navbar {
+		margin-top: 0;
+	}
+	.navbar-toggle { 
+		border-color: #fff;
+	}
+	.navbar-toggle .icon-bar {
+		background: #fff;
+	}
+	.header .social {
+		padding-left: 0;
+	}
+}

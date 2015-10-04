@@ -1,7 +1,8 @@
-.middle #about div.col-sm-12 {
+.middle #about {
   background: #fff;
   color: #000;
-  padding: 50px;
+  padding: 20px 50px;
+  border-radius: 4px;
 }
 .middle #about .about-block{
   height: 600px;
@@ -17,4 +18,21 @@
   width: 50%;
   height: 100%;
   font-size: 18px;
+}
+@media (max-width:768px){ 
+  .middle #about {
+    padding: 15px;
+  }
+  .middle #about .about-block img{
+    width: 100%;
+    height: auto;
+  }
+  .middle #about .about-block .about-detail{
+    width: 100%;
+    height: auto;
+    padding: 15px;
+  }
+  .middle #about .about-block h1{
+    font-size: 28px;
+  }
 }

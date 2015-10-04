@@ -1,15 +1,15 @@
 <div class="contact-form col-sm-12 bg-white">
-	<h2 class="text-uppercase">List Image</h2>
-	<a href="<?php echo base_url('/admin/project/add')?>" class="btn btn-default pull-right"> Add new Image </a>
+	<h2 class="text-uppercase">Danh sách hình ảnh</h2>
+	<a href="<?php echo base_url('/admin/project/add')?>" class="btn btn-default pull-right"> Thêm ảnh mới </a>
 	
 	<table class="table table-bordered table-hover">
 		<thead>
 			<th>Id</th>
-			<th>Title</th>
-			<th>Category</th>
-			<th>Image</th>
-			<th>Status</th>
-			<th>Action</th>
+			<th>Tiêu đề</th>
+			<th>Dự án</th>
+			<th>Hình ảnh</th>
+			<th>Tình trạng</th>
+			<th>Hoạt động</th>
 		</thead>
 		<tbody>
 		<?php if(count($list)>0){ ?>
@@ -25,14 +25,14 @@
 				?></td>
 				<td><?php echo ($item["status"])?"Hiển thị":"Không hiển thị"?></td>
 				<td>
-					<a href="<?php echo base_url("/admin/project/edit/".$item["id"]);?>"  class="btn btn-default">Edit</a>
-					<a href="#" onclick="confirmClick('<?php echo base_url('/admin/project/delete/'.$item["id"])?>')" class="btn btn-default"> Delete </a>
+					<a href="<?php echo base_url("/admin/project/edit/".$item["id"]);?>"  class="btn btn-default">Sửa</a>
+					<a href="#" onclick="confirmClick('<?php echo base_url('/admin/project/delete/'.$item["id"])?>')" class="btn btn-default"> Xóa </a>
 				</td>
 			</tr>
 			<?php }?>
 		<?php }else{?>
 			<tr>
-				<td class="text-center" colspan="5">Don't have any Item!</td>
+				<td class="text-center" colspan="6">Không có hình ảnh nào!</td>
 			</tr>
 		<?php }?>
 		</tbody>

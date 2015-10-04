@@ -22,3 +22,27 @@ a:hover{
 	padding: 30px;
 	overflow: hidden;
 }
+.middle .product{
+	margin-bottom: 15px;
+	height: 250px;
+	overflow: hidden;
+}
+.middle .product img {
+	width: 100%;
+	height: 100%;
+}
+.middle .product p{
+	background-color: rgba(255,255,255,0.5);
+	width: calc(100% - 30px);
+	position: absolute;
+	bottom: 0;
+	line-height: 50px;
+	color: #000;
+	margin-bottom: 0;
+}
+@media (max-width:768px){
+	.middle .container {
+		padding: 15px 0;
+		overflow: hidden;
+	}
+}

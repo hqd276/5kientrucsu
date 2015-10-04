@@ -18,8 +18,20 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav text-uppercase">
             <li class="<?php if($page=='home') echo 'active';?>"><a href="<?php echo base_url('');?>">Trang chủ</a></li>
-            <li class="<?php if($page=='service') echo 'active';?>"><a href="<?php echo base_url('service');?>">Dịch vụ</a></li>
-            <li class="<?php if($page=='project') echo 'active';?>"><a href="<?php echo base_url('project');?>">Dự án</a></li>
+            <li class="dropdown <?php if($page=='service') echo 'active';?>"><a data-toggle="dropdown" data-target="#" href="#">Dịch vụ<span class="caret"></span></a>
+              <ul class="dropdown-menu multi-level" role="menu">
+                <?php foreach ($cat_service as $key => $value) {?>
+                <li><a href="<?php echo base_url('service/'.$value['slug']);?>"><?php echo $value['name']?></a></li>
+                <?php }?>
+              </ul>
+            </li>
+            <li class="dropdown <?php if($page=='project') echo 'active';?>"><a data-toggle="dropdown" data-target="#" href="#">Dự án<span class="caret"></span></a>
+              <ul class="dropdown-menu multi-level" role="menu">
+                <?php foreach ($cat_project as $key => $value) {?>
+                <li><a href="<?php echo base_url('project/'.$value['slug']);?>"><?php echo $value['name']?></a></li>
+                <?php }?>
+              </ul>
+            </li>
             <li class="<?php if($page=='about') echo 'active';?>"><a href="<?php echo base_url('about');?>" >Giới thiệu</a></li>
             <li class="<?php if($page=='contact') echo 'active';?>"><a href="<?php echo base_url('contact');?>" >Liên hệ</a></li>
           </ul>

@@ -1,8 +1,8 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/about.css');?>">
 <div class="middle">
 	<div class="container">
-		<div id="about">
-			<div class="col-sm-12">
+		<div class="col-sm-12">
+			<div id="about">
 				<h2>Giới thiệu</h2>
 				<div class="about-block">
 					<img class="pull-left" src="<?php echo base_url();?>assets/images/about-detail.jpg">

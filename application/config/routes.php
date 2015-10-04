@@ -57,7 +57,7 @@ $route['news/list/(:num)/(:num)'] = "news/index/$1/$2";
 
 $route['detail/(:any)'] = "news/detail_t/$1";
 
-$route['service/(:any)'] = "news/index_t/3/$1";
+$route['service/(:any)'] = "service/index_t/$1";
 $route['project/(:any)'] = "project/index_t/$1";
 
 $route['chi-tiet-san-pham/(:any)'] = "product/detail_t/$1";
