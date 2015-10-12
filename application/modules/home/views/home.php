@@ -5,7 +5,7 @@
 	<!-- Tab panes -->
 		<div class="tab-content">
 	    <div role="tabpanel" class="tab-pane active text-center" id="home">
-	    	<div class="col-xs-12 col-sm-8 about">
+	    	<div class="col-sm-12 about">
 	    		<div id="carousel" class="carousel slide" data-ride="carousel" data-interval="3000">
 				  <!-- Wrapper for slides -->
 				  <div class="carousel-inner" role="listbox">

@@ -13,11 +13,11 @@
 <meta property="og:url" content="<?php echo base_url().'chi-tiet/'.$item['slug']?>" />
 <meta property="og:image" content="<?php echo base_url().'uploads/news/'.$item['image']?>" />
 <?php }?>
-<script src="https://code.jquery.com/jquery-1.11.2.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
 <!-- <script src="https://code.jquery.com/ui/1.11.2/jquery-ui.js"></script> -->
 
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 
 <script src="<?php echo base_url();?>assets/js/lightbox.js"></script>
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/lightbox.css">
