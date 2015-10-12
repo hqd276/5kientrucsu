@@ -25,23 +25,13 @@
                 <?php }?>
               </ul>
             </li>
-            <li class="dropdown <?php if($page=='project') echo 'active';?>"><a data-toggle="dropdown" data-target="#" href="#">Dự án<span class="caret"></span></a>
-              <ul class="dropdown-menu multi-level" role="menu">
-                <?php foreach ($cat_project as $key => $value) {?>
-                <li><a href="<?php echo base_url('project/'.$value['slug']);?>"><?php echo $value['name']?></a></li>
-                <?php }?>
-              </ul>
+            <li class="<?php if($page=='project') echo 'active';?>"><a href="<?php echo base_url('project');?>">Dự án</a>
+              
             </li>
             <li class="<?php if($page=='about') echo 'active';?>"><a href="<?php echo base_url('about');?>" >Giới thiệu</a></li>
             <li class="<?php if($page=='contact') echo 'active';?>"><a href="<?php echo base_url('contact');?>" >Liên hệ</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
     </nav>
-    <div class="clearfix"></div>
-    <div class="social text-left hidden">
-      <a href=""><i class="fa fa-facebook"></i></a>
-      <a href=""><i class="fa fa-google-plus"></i></a>
-      <a href=""><i class="fa fa-skype"></i></a>
-    </div>
   </div>
 </div>

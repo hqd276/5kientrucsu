@@ -21,15 +21,17 @@ class Project extends MX_Controller {
 		$this->template->set_partial('footer','footer',$data);
 	}
 	
-	public function index($cat = 0){
+	public function index(){
 		$data = array();
 		$data['page'] = "project";
 
 		$where = array('status'=>1);
-		if ($cat)
-			$where['category_id'] = $cat;
- 		$list_items = $this->modelproject->getProject($where);
- 
+		$category = array('name'=>'Tất cả dự án','slug'=>'project','description'=>'');
+		$list_items = array();
+
+		$category['childs'] = $this->modelcategory->getCategories(array('type'=>2));
+
+ 		$data['category'] = $category;
  		$data['list_items'] = $list_items;
 		$this->template->build('project',$data);
 	}

@@ -19,12 +19,12 @@
 
 				<div class="about-content text-left ">
 					<ul class="list-unstyled">
-						<li>D   <span>+</span>   S .T .U.D.I.O</li>
+						<!-- <li>D   <span>+</span>   S .T .U.D.I.O</li>
 						<li><span>W.</span>e  a.r.e  a  g.r.o.u.p  o.f</li>
 						<li><span>A.</span>r.c.h.i.t.e.c.t.s</li>
 						<li><span>W.</span>h.o  a.r.e  l.o.o.k.i.n.g  f.o.r</li>
-						<li><span>D.</span>i.f.f.e.r.e.n.c.e.s  . . .</li>
-						<li>More <i class="fa fa-long-arrow-right"></i></li>
+						<li><span>D.</span>i.f.f.e.r.e.n.c.e.s  . . .</li> -->
+						<li class="viewmore"><a href="<?php echo base_url('about')?>">Giới thiệu <i class="fa fa-long-arrow-right"></i></a></li>
 					</ul>
 				</div>
 	    	</div>
@@ -44,6 +44,9 @@
 			    	</a>
 		    	</div>
 	    	<?php }?>
+	    	<div class="col-xs-6 col-sm-4 product">
+		    	<div class="fb-page" data-href="https://www.facebook.com/5Architects-501885909987556" data-width="100%" data-height="250px" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true" data-show-posts="true"></div>
+	    	</div>
 	    </div>
 	</div>
 </div>

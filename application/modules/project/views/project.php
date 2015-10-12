@@ -12,10 +12,6 @@
         </div>
         <ol class="breadcrumb">
           <li><a href="<?php echo base_url();?>" target="">Home</a></li>
-          <li><a href="#">Projects</a></li>
-          <?php if(is_array($category['parent'])) {?>
-          <li><a href="<?php echo base_url('project/'.$category['parent']['slug']);?>" target=""><?php echo $category['parent']['name']?></a></li>
-          <?php }?>
           <li class="active"><a href="<?php echo base_url('project/'.$category['slug']);?>" target=""> <b><?php echo $category['name']?></b></a></li>
         </ol>
 
