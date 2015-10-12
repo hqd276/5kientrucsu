@@ -9,3 +9,29 @@
     </div>
   </div>
 </div>
+
+<div class="btn-go-top">
+	<i class="fa fa-arrow-circle-up"></i>
+	<i class="fa fa-arrow-circle-down"></i>
+</div>
+<style type="text/css">
+	.btn-go-top {
+		font-size: 32px;
+		position: fixed;
+		bottom: 50px;
+		right: 100px;
+	}
+	.btn-go-top i{
+		cursor: pointer;
+	}
+</style>
+<script type="text/javascript">
+	$(".fa-arrow-circle-up").click(function() {
+	  $("html, body").animate({ scrollTop: 0 }, "slow");
+	  return false;
+	});
+	$(".fa-arrow-circle-down").click(function() {
+	  $("html, body").animate({ scrollTop: $(document).height() }, "slow");
+	  return false;
+	});
+</script>
