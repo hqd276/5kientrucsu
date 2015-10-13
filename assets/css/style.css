@@ -30,6 +30,10 @@ a:hover{
 .middle .product img {
 	width: 100%;
 	height: 100%;
+	opacity: 0.9;
+}
+.middle .product img:hover {
+	opacity: 1;
 }
 .middle .product p{
 	background-color: rgba(255,255,255,0.5);
@@ -39,6 +43,11 @@ a:hover{
 	line-height: 50px;
 	color: #000;
 	margin-bottom: 0;
+}
+.middle .product p:hover {
+	font-weight: bold;
+	background-color: rgba(255,255,255,0.8);
+	line-height: 80px;
 }
 @media (max-width:768px){
 	.middle .container {
