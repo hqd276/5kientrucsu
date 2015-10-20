@@ -23,7 +23,7 @@
 	    			<h4 class="text-uppercase">Liên hệ</h4>
 	    			<div class="form-group">
 	    				<label>Họ tên</label>
-	    				<input type="email" class="form-control" id="inputEmail3" name="name" placeholder="Họ tên" value="<?php echo set_value('name'); ?>">
+	    				<input type="" class="form-control" id="inputEmail3" name="name" placeholder="Họ tên" value="<?php echo set_value('name'); ?>">
 	    			</div>
 	    			<div class="form-group">
 	    				<label>Email</label>
@@ -59,10 +59,16 @@
 	  if (navigator.geolocation) {
 	    navigator.geolocation.getCurrentPosition(function(position) {
 	      var pos = {
-	        lat: position.coords.latitude,
-	        lng: position.coords.longitude
+	        // lat: position.coords.latitude,
+	        // lng: position.coords.longitude
+	        lat: 20.971934,
+	        lng: 105.7742316
 	      };
-
+	      var marker = new google.maps.Marker({
+		    position: pos,
+		    map: map,
+		    title: '5 Kiến trúc sư!'
+		  });
 	      map.setCenter(pos);
 	    }, function() {
 	    });

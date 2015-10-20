@@ -51,7 +51,7 @@ class Product extends MX_Controller {
 			$data['cat'] = $category;
 			$data['title'] = $category['name'];
 			$data['description'] = $category['description'];
-			$list_product = $this->modelproduct->getProduct(array('category_id'=>$category['id']),' LIMIT 0,5');
+			$list_product = $this->modelproduct->getProduct(array('category_id'=>$category['id']),' LIMIT 0,5','position,id DESC');
 		}
 
 		$data['list_product'] = $list_product;

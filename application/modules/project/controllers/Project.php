@@ -29,7 +29,7 @@ class Project extends MX_Controller {
 		$category = array('name'=>'Tất cả dự án','slug'=>'project','description'=>'');
 		$list_items = array();
 
-		$category['childs'] = $this->modelcategory->getCategories(array('type'=>2));
+		$category['childs'] = $this->modelcategory->getCategories(array('type'=>2),null,'ORDER BY id DESC');
 
  		$data['category'] = $category;
  		$data['list_items'] = $list_items;
@@ -53,7 +53,7 @@ class Project extends MX_Controller {
 					$category['parent'] = $this->modelcategory->getCategoryBy('id',$category['parent']);
 			}
 
-			$list_items = $this->modelproject->getProject($where);
+			$list_items = $this->modelproject->getProject($where,null,'id DESC');
 		}
 
  		$data['category'] = $category;

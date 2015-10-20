@@ -52,3 +52,6 @@
 .navbar-collapse.collapse {
   display: none!important;
 }
+.navbar-brand img{
+	width: 50px;
+}

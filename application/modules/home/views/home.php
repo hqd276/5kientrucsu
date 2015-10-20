@@ -6,6 +6,7 @@
 		<div class="tab-content">
 	    <div role="tabpanel" class="tab-pane active text-center" id="home">
 	    	<div class="col-sm-12 about">
+	    		<img class="carousel-logo" alt="5 Kiến trúc sư" src="<?php echo base_url('assets/images/logo5kts.png');?>">
 	    		<div id="carousel" class="carousel slide" data-ride="carousel" data-interval="3000">
 				  <!-- Wrapper for slides -->
 				  <div class="carousel-inner" role="listbox">
@@ -24,7 +25,7 @@
 						<li><span>A.</span>r.c.h.i.t.e.c.t.s</li>
 						<li><span>W.</span>h.o  a.r.e  l.o.o.k.i.n.g  f.o.r</li>
 						<li><span>D.</span>i.f.f.e.r.e.n.c.e.s  . . .</li> -->
-						<li class="viewmore"><a href="<?php echo base_url('about')?>">Giới thiệu <i class="fa fa-long-arrow-right"></i></a></li>
+						<li class="viewmore text-uppercase"><a href="<?php echo base_url('about')?>">More <i class="fa fa-long-arrow-right"></i></a></li>
 					</ul>
 				</div>
 	    	</div>
