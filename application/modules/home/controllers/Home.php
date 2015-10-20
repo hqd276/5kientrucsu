@@ -21,7 +21,7 @@ class Home extends MX_Controller{
 		$about['data'] = json_decode($about['value']);
 		$data['about'] = $about;
 
-		$categories = $this->modelcategory->getCategories(array('status'=>1,'type'=>2));
+		$categories = $this->modelcategory->getCategories(array('status'=>1,'type'=>2),null,' ORDER BY id DESC');
 		$data['categories'] = $categories;
 
 		$banners = $this->modelbanner->getBanner(array('position'=>0));

@@ -16,7 +16,7 @@ class Header extends MX_Controller{
 		$cat_product = array();
 		$cat_project = array();
 		$cat_service = array();
-		$categories = $this->modelcategory->getCategories(array('status'=>1,'parent'=>-1),null," ORDER BY `order`");
+		$categories = $this->modelcategory->getCategories(array('status'=>1,'parent'=>-1),null," ORDER BY id DESC");
 		
 		foreach ($categories as $key => $value) {
 			if ($value['type']==1){
