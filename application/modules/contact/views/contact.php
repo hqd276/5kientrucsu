@@ -38,7 +38,7 @@
 	    				<textarea class="form-control" name="content" placeholder="Nội dung"><?php echo set_value('content'); ?></textarea>
 	    			</div>
 	    			<div class="form-group">
-	    				<button type="submit" class="btn">Gửi</button>
+	    				<button type="submit" class="btn btn-default">Gửi</button>
 	    			</div>
 	    		</form>
 	    	</div>

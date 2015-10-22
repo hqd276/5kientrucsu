@@ -25,7 +25,7 @@
 						<li><span>A.</span>r.c.h.i.t.e.c.t.s</li>
 						<li><span>W.</span>h.o  a.r.e  l.o.o.k.i.n.g  f.o.r</li>
 						<li><span>D.</span>i.f.f.e.r.e.n.c.e.s  . . .</li> -->
-						<li class="viewmore text-uppercase"><a href="<?php echo base_url('about')?>">More <i class="fa fa-long-arrow-right"></i></a></li>
+						<li class="viewmore"><a href="<?php echo base_url('about')?>">more <i class="fa fa-long-arrow-right"></i></a></li>
 					</ul>
 				</div>
 	    	</div>

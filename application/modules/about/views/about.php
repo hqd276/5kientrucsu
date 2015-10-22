@@ -5,7 +5,7 @@
 			<div id="about">
 				<h2>Giới thiệu</h2>
 				<div class="about-block">
-					<img class="pull-left" src="<?php echo base_url();?>assets/images/about-detail.jpg">
+					<img class="pull-left" src="<?php echo base_url('uploads/settings/'. $about['data']->image);?>">
 					<div class="about-detail pull-left">
 						<h1> <i class="fa fa-road"></i><?php echo $about['data']->name?></h1>
 		        		<p><?php echo $about['data']->description?></p>

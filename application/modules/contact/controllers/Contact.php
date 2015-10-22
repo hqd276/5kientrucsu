@@ -34,31 +34,9 @@ class Contact extends MX_Controller {
 
 			$this->load->library('email');
 
-			$config['protocol']    = 'smtp';
-
-            $config['smtp_host']    = 'ssl://smtp.gmail.com';
-
-            $config['smtp_port']    = '465';
-
-            $config['smtp_timeout'] = '7';
-
-            $config['smtp_user']    = 'dunghq87@gmail.com';
-
-            $config['smtp_pass']    = 'Hoangdung87';
-
-            $config['charset']    = 'utf-8';
-
-            $config['newline']    = "\r\n";
-
-            $config['mailtype'] = 'text'; // or html
-
-            $config['validation'] = TRUE; // bool whether to validate email or not      
-
-            $this->email->initialize($config);
-
 			$this->email->from($this->input->post('email'),$this->input->post('name'));
 			$this->email->to('contact@5kientrucsu.com'); 
-			// $this->email->cc('dunghq87@gmail.com'); 
+			$this->email->cc('dunghq87@gmail.com'); 
 
 			$this->email->subject($this->input->post('phone'));
 			$this->email->message($this->input->post('content'));	

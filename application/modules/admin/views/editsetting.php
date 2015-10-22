@@ -52,7 +52,7 @@ tinymce.init({
 			  	<input type="" class="form-control" id="inputEmail3" name="name" placeholder="Name" value="<?php echo $item['name']; ?>">
 			</div>
 		</div>
-		<!-- <div class="form-group col-sm-12">
+		<div class="form-group col-sm-12">
 			<label for="inputEmail3" class="col-sm-2 control-label">Image</label>
 			<div class="col-sm-10">
 				<?php 
@@ -62,7 +62,7 @@ tinymce.init({
 				?>
 			  	<input type="file" class="form-control" id="inputEmail3" name="image" placeholder="Image">
 			</div>
-		</div> -->
+		</div>
 		<div class="form-group col-sm-12">
 			<label for="inputEmail3" class="col-sm-2 control-label">Description</label>
 			<div class="col-sm-10">
