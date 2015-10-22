@@ -18,7 +18,7 @@ class Project extends MX_Controller{
 		$this->template->set_layout('admin');
 	}
 	
-	public function index($page = 1){
+	public function index($page = 1,$cat = 0){
 		$data = array();
 
 		$item_per_page = 10;
@@ -26,8 +26,14 @@ class Project extends MX_Controller{
 		if ($page>1) {
 			$begin = ($page-1) * $item_per_page ;
 		}
+
+		if ((int)$cat>0) {
+			$strWhere = array('category_id'=>$cat);
+		}else{
+			$strWhere = null;
+		}
 		$this->load->model(array('modelcategory'));
-		$project = $this->modelproject->getProject(null," LIMIT ".$begin.",".($item_per_page+1));
+		$project = $this->modelproject->getProject($strWhere," LIMIT ".$begin.",".($item_per_page+1),'id DESC');
 		if (count($project)>0) {
 			foreach ($project as $key => $value) {
 				if ($value['category_id']>0){
@@ -48,6 +54,9 @@ class Project extends MX_Controller{
 		$data['prev'] = $page - 1;
 
 		$data['list'] = $project;
+		$categories = $this->modelcategory->getCategories(null,null,'ORDER BY name');
+		$data['categories'] = $categories;
+		$data['cat'] = $cat;
 
 		$this->template->build('listproject',$data);
 	}

@@ -1,7 +1,17 @@
 <div class="contact-form col-sm-12 bg-white">
 	<h2 class="text-uppercase">Danh sách hình ảnh</h2>
-	<a href="<?php echo base_url('/admin/project/add')?>" class="btn btn-default pull-right"> Thêm ảnh mới </a>
 	
+	<div class="form-group col-sm-6">
+		<label>Chọn dự án:</label>
+		<select class="form-control" name="category-choice">
+			<?php foreach ($categories as $key => $value) {?>
+			<option <?php if( $value['id'] == $cat) echo 'selected' ?> value="<?php echo $value['id']?>"><?php echo $value['name']?></option>
+			<?php } ?>
+		</select>
+	</div>
+	<div class="col-sm-6">
+		<a href="<?php echo base_url('/admin/project/add')?>" class="btn btn-default pull-right"> Thêm ảnh mới </a>
+	</div>
 	<table class="table table-bordered table-hover">
 		<thead>
 			<th>Id</th>
@@ -39,9 +49,14 @@
 	</table>
 	<nav>
 	  	<ul class="pager">
-		    <li class="previous <?php if ($prev <1) echo 'disabled';?>"><a href="<?php if ($prev >=1) echo  base_url().'admin/project/index/'. $prev ?>"><span aria-hidden="true">&larr;</span> Older</a></li>
-		    <li class="next <?php if ($next == 0) echo 'disabled';?>"><a href="<?php if ($next <> 0) echo base_url().'admin/project/index/'. $next ?>">Newer <span aria-hidden="true">&rarr;</span></a></li>
+		    <li class="previous <?php if ($prev <1) echo 'disabled';?>"><a href="<?php if ($prev >=1) echo  base_url().'admin/project/index/'. $prev .'/'. $cat ?>"><span aria-hidden="true">&larr;</span> Older</a></li>
+		    <li class="next <?php if ($next == 0) echo 'disabled';?>"><a href="<?php if ($next <> 0) echo base_url().'admin/project/index/'. $next .'/'. $cat ?>">Newer <span aria-hidden="true">&rarr;</span></a></li>
 	  	</ul>
 	</nav>
 </div>
-		
+<script type="text/javascript">
+	$('[name=category-choice]').change(function(){
+		window.location.href = '/admin/project/index/1/' + $(this).val();
+	});
+
+</script>
