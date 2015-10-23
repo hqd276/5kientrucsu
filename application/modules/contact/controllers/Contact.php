@@ -32,19 +32,33 @@ class Contact extends MX_Controller {
 			$dataC['phone'] = $this->input->post('phone'); 
 			$dataC['content'] = $this->input->post('content'); 
 
-			$this->load->library('email');
+			$config['protocol']    = 'smtp';
+	        $config['smtp_host']    = 'ssl://smtp.gmail.com';
+	        $config['smtp_port']    = '465';
+	        $config['smtp_timeout'] = '7';
+	        $config['smtp_user']    = 'dunghq87@gmail.com';
+	        $config['smtp_pass']    = 'Hoangdung87';
+	        $config['charset']    = 'utf-8';
+	        $config['newline']    = "\r\n";
+	        $config['mailtype'] = 'html'; // or html
+	        $config['validation'] = TRUE; // bool whether to validate email or not      
+
+			$this->load->library('email',$config);
 
 			$this->email->from($this->input->post('email'),$this->input->post('name'));
-			$this->email->to('contact@5kientrucsu.com'); 
-			$this->email->cc('dunghq87@gmail.com'); 
+			$this->email->to('contact@5kientrucsu.com');
 
 			$this->email->subject($this->input->post('phone'));
-			$this->email->message($this->input->post('content'));	
+			$this->email->message($this->input->post('content'));
 
-			if ($this->model->insertSupport($dataC) || $this->email->send())
+			$this->model->insertSupport($dataC);
+
+			if ($this->email->send())
 				$data['b_Check']= true;
-			else
+			else{
+				var_dump($this->email->print_debugger());die;
 				$data['b_Check']= false;
+			}
 		} 
 
 		$this->template->build('contact',$data);
